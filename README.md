@@ -7,7 +7,7 @@ A script that attempts to capture a WPA2 four‑way handshake and converts it to
 ```bash
 curl https://raw.githubusercontent.com/guest3301/dot11-handshake/refs/heads/main/script.sh -o script
 chmod +x script
-./script
+sudo ./script
 ```
 
 ## Usage
