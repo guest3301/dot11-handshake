@@ -1,13 +1,14 @@
 # dot11-handshake
 
 A script that attempts to capture a WPA2 four‑way handshake and converts it to hashcat (mode 22000) format.
+This script would run perfectly on debian-based linux systems running on newer linux kernel versions (=> 6).
 
 ## Installation
 
 ```bash
 curl https://raw.githubusercontent.com/guest3301/dot11-handshake/refs/heads/main/script.sh -o script
 chmod +x script
-sudo ./script
+./script
 ```
 
 ## Usage
@@ -15,6 +16,12 @@ sudo ./script
 1. Run the script (as root):
    ```bash
    sudo ./script
+   ```
+
+2. Revert the Wi-Fi adapter back to managed mode using:
+
+   ```bash
+   sudo ./script stop
    ```
 
 2. Crack the captured handshake with **hashcat**:
